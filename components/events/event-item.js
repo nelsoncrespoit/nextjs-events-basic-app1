@@ -4,6 +4,7 @@ import DateIcon from '../icons/date-icon';
 import AddressIcon from '../icons/address-icon';
 import ArrowIcon from '../icons/arrow-right-icon';
 import styles from './event-item.module.css';
+import Image from "next/image";
 
 function EventItem(props){
     const {title, image, date, location, id} = props;
@@ -19,7 +20,8 @@ function EventItem(props){
     
     return(
         <li key={id} className={styles.item}>
-            <img src={'/' + image} alt={title}/>
+            <Image src={'/' + image} alt={title} width={250} height={160}/>
+            {/* <img src={'/' + image} alt={title}/> */}
             <div className={styles.content}>
                 <div>
                     <h2>{title}</h2>
